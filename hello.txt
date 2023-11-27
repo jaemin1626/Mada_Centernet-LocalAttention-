@@ -3,9 +3,6 @@
 three
 <<<<<<< HEAD
 four
-<<<<<<< HEAD
 five
 =======
 >>>>>>> parent of aa9adbc (R2)
-=======
->>>>>>> parent of 3c9a436 (R5)
