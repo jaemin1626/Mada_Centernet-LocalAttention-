@@ -562,9 +562,6 @@ class exkp(nn.Module):
         outs  = []
         dwn_hms = []
         d = []
-        sum = 0
-        avg_sum = 0
-        count_num = 0
         for ind in range(self.nstack):
             if ind == 0:
                 kp_, cnv_  = self.kps[ind], self.cnvs[ind]
@@ -632,10 +629,7 @@ class exkp(nn.Module):
                 # save_image(bound_2,'/home/ai001/MadaCenternet_(LocalAttention)/save_dir/MadaCenternet_(LocalAttention)/bound2_image/bound2_{}.png'.format(file_count))
                 # save_image(offset_1,'/home/ai001/MadaCenternet_(LocalAttention)/save_dir/MadaCenternet_(LocalAttention)/offset1_image/offset1_{}.png'.format(file_count))
                 # save_image(offset_2,'/home/ai001/MadaCenternet_(LocalAttention)/save_dir/MadaCenternet_(LocalAttention)/offset2_image/offset2_{}.png'.format(file_count))
-                
-                count_num += 1
               
-                
                 hm_d = torch.nonzero( hm >= 0.3)
                 d.append(hm_d)
                 uphm = self.uphm(outs[0]['hm'])
@@ -653,11 +647,6 @@ class exkp(nn.Module):
                     f_shape = i.shape[-1]
                     dwn_hm_map = F.interpolate(hm, size=(f_shape, f_shape), mode='bilinear')
                     dwn_hms.append(dwn_hm_map)
-                
-            for i in d:
-                sum += len(i)
-                
-            avg_sum = sum / len(d)
 
         return outs
 
