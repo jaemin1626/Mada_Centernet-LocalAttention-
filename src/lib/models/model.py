@@ -8,12 +8,12 @@ import torch.nn as nn
 import os
 
 
-from .networks.large_hourglass import get_large_hourglass_net
+# from .networks.large_hourglass import get_large_hourglass_net
 from.networks.madaCenternet_localAttention import get_madaCenternet_localAttention
 from.networks.madaCenternet_dualAttention import get_madaCenternet_dualAttention
 # opt.arch
 _model_factory = {
-  'hourglass': get_large_hourglass_net,
+  # 'hourglass': get_large_hourglass_net,
   'mada_centernet_localAttention' : get_madaCenternet_localAttention,
   'mada_centernet_dualAttention' : get_madaCenternet_dualAttention
 }
