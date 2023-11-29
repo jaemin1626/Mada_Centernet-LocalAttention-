@@ -61,7 +61,7 @@ class opts(object):
     # model
     self.parser.add_argument('--arch', default='mada_centernet_localAttention',#hourglass_multi_scale_with_multiscale_dcn',  # 수정
                              help='model architecture. Currently tested'
-                                  'hourglass | mada_centernet_localAttention')
+                                  'hourglass | mada_centernet_localAttention | mada_centernet_dualAttention')
     self.parser.add_argument('--head_conv', type=int, default=-1,
                              help='conv layer channels for output head'
                                   '0 for no conv layer'
