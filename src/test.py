@@ -13,17 +13,15 @@ from progress.bar import Bar
 import torch
 import pandas as pd
 
-#from lib.external.nms import soft_nms
-# from lib.opts_multiscale_with_multiscale_dcn import opts ## Mada_Centernet
-# from lib.opts_madaCenternet_localAttention import opts # Mada_Centernet + local Attention
+
 from lib.opts_custom import opts # Centernet
-# from lib.opts_multiscale_centernet import opts
+
 from lib.logger import Logger
 from lib.utils.utils import AverageMeter
 from lib.datasets.dataset_factory import dataset_factory
 from lib.detectors.detector_factory import detector_factory
 from lib.datasets.dataset_factory import get_dataset
-# from lib.opts_madaCenternet_localAttention import opts # 수정
+from lib.opts_madaCenternet_localAttention import opts # 수정
 
 class PrefetchDataset(torch.utils.data.Dataset):
   def __init__(self, opt, dataset, pre_process_func):
