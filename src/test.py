@@ -21,7 +21,7 @@ from lib.utils.utils import AverageMeter
 from lib.datasets.dataset_factory import dataset_factory
 from lib.detectors.detector_factory import detector_factory
 from lib.datasets.dataset_factory import get_dataset
-from lib.opts_madaCenternet_localAttention import opts # 수정
+from lib.opts_madaCenternet import opts # 수정
 
 class PrefetchDataset(torch.utils.data.Dataset):
   def __init__(self, opt, dataset, pre_process_func):

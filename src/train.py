@@ -8,7 +8,8 @@ import os
 
 import torch
 import torch.utils.data
-from lib.opts_madaCenternet_localAttention import opts # 수정
+from lib.opts_madaCenternet import opts # madaCenternet opt 사용 시 opt의 models 수정!
+from lib.opts_custom import opts # Centernet opt
 from lib.models.model import create_model, load_model, save_model
 from lib.models.data_parallel import DataParallel
 from lib.logger import Logger
