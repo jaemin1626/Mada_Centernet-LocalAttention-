@@ -10,11 +10,13 @@ import os
 # from .networks.large_hourglass import get_large_hourglass_net
 from.networks.madaCenternet_localAttention import get_madaCenternet_localAttention
 from.networks.madaCenternet_dualAttention import get_madaCenternet_dualAttention
+from.networks.Centernet_localAttention import get_Centernet_localAttention
 # opt.arch
 _model_factory = {
   # 'hourglass': get_large_hourglass_net,
   'mada_centernet_localAttention' : get_madaCenternet_localAttention,
-  'mada_centernet_dualAttention' : get_madaCenternet_dualAttention
+  'mada_centernet_dualAttention' : get_madaCenternet_dualAttention,
+  'centernet_localAttention' : get_Centernet_localAttention
 }
 
 def create_model(arch, heads, head_conv, num_stack = None):
