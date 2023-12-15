@@ -11,6 +11,7 @@ import os
 from.networks.madaCenternet_localAttention import get_madaCenternet_localAttention
 from.networks.madaCenternet_dualAttention import get_madaCenternet_dualAttention
 from.networks.Centernet_localAttention import get_Centernet_localAttention
+
 # opt.arch
 _model_factory = {
   # 'hourglass': get_large_hourglass_net,
@@ -19,7 +20,7 @@ _model_factory = {
   'centernet_localAttention' : get_Centernet_localAttention
 }
 
-def create_model(arch, heads, head_conv, num_stack = None):
+def create_model(arch, heads, head_conv, num_stack = 2):
   num_layers = None
   # 수정
   try:
